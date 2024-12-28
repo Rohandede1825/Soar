@@ -1,0 +1,172 @@
+/* import React from 'react';
+import { FaClipboardList } from "react-icons/fa6";
+import { TiHome } from "react-icons/ti";
+import { GrTransaction } from "react-icons/gr";
+import { MdManageAccounts } from "react-icons/md";
+import { RiStockFill } from "react-icons/ri";
+import { TbCreditCardFilled } from "react-icons/tb";
+import { FaHandHoldingUsd } from "react-icons/fa";
+import { MdMiscellaneousServices } from "react-icons/md";
+import { VscLightbulbSparkle } from "react-icons/vsc";
+import { IoIosSettings } from "react-icons/io";
+
+function Dashboard() {
+  return (
+    <div className="bg-gray-100 font-sans antialiased h-screen flex">
+      {/* Sidebar *
+      <div className="bg-white w-64 p-6">
+        <div className="flex items-center mb-8">
+          <i className="fas fa-check-square text-2xl text-gray-800"></i>
+          <FaClipboardList />
+          <span className="ml-3 text-xl font-bold text-gray-800">Soar Task</span>
+        </div>
+        <nav>
+          <ul>
+            <li className="mb-4">
+              <a className="flex items-center text-gray-800" href="#">
+                <i className="fas fa-home text-lg"></i>
+                <TiHome />
+                <span className="ml-3 font-bold">Dashboard</span>
+              </a>
+            </li>
+            <li className="mb-4">
+              <a className="flex items-center text-gray-800" href="#">
+                <i className="fas fa-home text-lg"></i>
+                <GrTransaction />
+                <span className="ml-3">Transaction</span>
+              </a>
+            </li>
+            <li className="mb-4">
+              <a className="flex items-center text-gray-800" href="#">
+                <i className="fas fa-home text-lg"></i><MdManageAccounts />
+                <span className="ml-3">Accounts</span>
+              </a>
+            </li>
+            <li className="mb-4">
+              <a className="flex items-center text-gray-800" href="#">
+                <i className="fas fa-home text-lg"></i><RiStockFill />
+                <span className="ml-3">Investments</span>
+              </a>
+            </li>
+            <li className="mb-4">
+              <a className="flex items-center text-gray-800" href="#">
+                <i className="fas fa-home text-lg"></i><TbCreditCardFilled />
+                <span className="ml-3">Credit Cards</span>
+              </a>
+            </li>
+            <li className="mb-4">
+              <a className="flex items-center text-gray-800" href="#">
+                <i className="fas fa-home text-lg"></i><FaHandHoldingUsd />
+                <span className="ml-3">Loan</span>
+              </a>
+            </li>
+            <li className="mb-4">
+              <a className="flex items-center text-gray-800" href="#">
+                <i className="fas fa-home text-lg"></i><MdMiscellaneousServices />
+                <span className="ml-3">Services</span>
+              </a>
+            </li>
+            <li className="mb-4">
+              <a className="flex items-center text-gray-800" href="#">
+                <i className="fas fa-home text-lg"></i><VscLightbulbSparkle />
+                <span className="ml-3">My privileges</span>
+              </a>
+            </li>
+            <li className="mb-4">
+              <a className="flex items-center text-gray-800" href="#">
+                <i className="fas fa-home text-lg"></i><IoIosSettings />
+                <span className="ml-3">Settings</span>
+              </a>
+            </li>
+            {/* Add other sidebar items here 
+          </ul>
+        </nav>
+      </div>
+
+      * Main Content 
+      <div className="flex-1 p-6 bg-grey gap-5">
+        <div className="flex justify-between items-center mb-6">
+          <h1 className="text-2xl font-bold text-gray-800">Overview</h1>
+          <div className="flex items-center">
+            <div className="relative">
+              <input
+                className="bg-gray-200 rounded-full py-2 px-4 pl-10 focus:outline-none"
+                placeholder="Search for something"
+                type="text"
+              />
+              <i className="fas fa-search absolute left-3 top-2.5 text-gray-500"></i>
+            </div>
+            <i className="fas fa-cog text-2xl text-gray-500 ml-6"></i>
+            <i className="fas fa-bell text-2xl text-gray-500 ml-6"></i>
+            <img
+              alt="User profile picture"
+              className="rounded-full ml-6"
+              src="https://storage.googleapis.com/a1aa/image/Cx9ZrdAG7c6KFNAZWzsAz8ldxZvupPeJW2uCaElhCsD5UOfTA.jpg"
+              height="40"
+              width="40"
+            />
+          </div>
+        </div>
+
+        {/* My Cards Section 
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="col-span-2 bg-white p-6 rounded-lg shadow">
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-lg font-bold text-gray-800">My Cards</h2>
+              <a className="text-blue-500" href="#">See All</a>
+            </div>
+            <div className="flex space-x-4">
+              {/* Card 1 *
+              <div className="bg-gradient-to-r from-gray-700 to-gray-900 p-6 rounded-2xl text-white w-full">
+                <div className="mb-4">
+                  <span className="block text-sm">Balance</span>
+                  <span className="text-2xl font-bold">$5,756</span>
+                </div>
+                <div className="mb-4">
+                  <span className="block text-sm">CARD HOLDER</span>
+                  <span className="text-lg">Eddy Cusuma</span>
+                </div>
+                <div className="mb-4  mr-4">
+                  <span className="block text-sm">VALID THRU</span>
+                  <span className="text-lg">12/22</span>
+                </div>
+                <div className="text-lg">3778 **** **** 1234</div>
+              </div>
+              {/* Card 2 *
+              <div className="bg-white p-6 rounded-lg shadow w-1/2">
+                <div className="mb-4">
+                  <span className="block text-sm text-gray-500">Balance</span>
+                  <span className="text-2xl font-bold text-gray-800">$5,756</span>
+                </div>
+                <div className="container flex-auto gap-1">
+                <div className="mb-4">
+                  <span className="block text-sm text-gray-500">CARD HOLDER</span>
+                  <span className="text-lg text-gray-800">Eddy Cusuma</span>
+                </div>
+
+                <div className="">
+                  <span className="block text-sm text-gray-500">VALID THRU</span>
+                  <span className="text-l text-gray-800">12/22</span>
+                </div>
+                </div>
+
+                <div className="text-lg text-gray-800">3778 **** **** 1234</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Recent Transactions
+          <div className="bg-white p-6 rounded-lg shadow">
+            <h2 className="text-lg font-bold text-gray-800 mb-4">Recent Transactions</h2>
+            <div className="space-y-4">
+              {/* Add transaction items *
+            </div>
+          </div> *
+
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Dashboard; */
