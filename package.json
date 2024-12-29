@@ -11,7 +11,10 @@
     "build:css": "npx tailwindcss -i ./src/index.css -o ./src/tailwind-output.css --watch"
   },
   "dependencies": {
+    "chart.js": "^4.4.7",
+    "nodemon": "^3.1.9",
     "react": "^18.3.1",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.3.1",
     "react-icons": "^5.4.0"
   },

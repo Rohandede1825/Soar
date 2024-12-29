@@ -15,7 +15,11 @@ function App() {
     <>
    
      <Navbar/>
+     
+
      < Dashboard />
+     {/* <WeeklyActivityChart/> */}
+     
      <Sidebar/>
       {/* <WeeklyActivity /> */}
     

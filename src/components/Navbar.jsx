@@ -48,7 +48,7 @@ const Navbar = () => {
         <i className="fas fa-cog text-2xl text-gray-500 cursor-pointer hover:text-gray-800"></i>
         <i className="fas fa-bell text-2xl text-gray-500 cursor-pointer hover:text-gray-800"></i>
         <img
-          src="https://via.placeholder.com/40"
+          src="https://media.istockphoto.com/id/1354842602/photo/portrait-of-a-young-businesswoman-working-on-a-laptop-in-an-office.jpg?s=612x612&w=0&k=20&c=kfP1g2712RiaxsDriIxFo363ARlaL2D591s-22CnIo8="
           alt="User profile"
           className="rounded-full cursor-pointer hover:opacity-80"
           width="40"
