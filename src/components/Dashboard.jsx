@@ -9,7 +9,7 @@ import BalanceHistory from "./BalanceHistory.jsx";
 function Dashboard() {
     return (
         <div
-            className="absolute bg-gray-100 top-[125px] left-[200] p-6 rounded-lg shadow-lg  overflow-y-auto"
+            className="absolute bg-gray-100 top-[125px] left-[200] p-6 rounded-lg shadow-lg scroll-ml-12  overflow-y-auto"
             style={{ width: "1200px", height: "auto", gap: "30px" }}
         >
             {/* Dashboard Sections */}

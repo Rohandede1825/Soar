@@ -12,7 +12,7 @@ import Dashboard from './dashboard';
 
 
 const Sidebar = () => {
-  const [currentComponent, setCurrentComponent] = useState(); // State to manage the current component
+  const [currentComponent, setCurrentComponent] = useState(<Dashboard/>); // State to manage the current component
 
   const handleSettingsClick = () => {
     setCurrentComponent(<ProfileForm/>); // Set the ProfileForm component when "Settings" is clicked
