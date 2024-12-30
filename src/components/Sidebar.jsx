@@ -17,9 +17,6 @@ const Sidebar = () => {
   const handleSettingsClick = () => {
     setCurrentComponent(<ProfileForm/>); // Set the ProfileForm component when "Settings" is clicked
   };
-
-  
-
   return (
     <div className="  hidden md:flex md:flex-row md:h-screen md:overflow-hidden"> 
       {/* Sidebar */}

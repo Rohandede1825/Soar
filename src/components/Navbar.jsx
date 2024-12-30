@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { IoMdMenu } from "react-icons/io";
 import { FaClipboardList } from "react-icons/fa6";
 import Sidebar from "./Sidebar";
+import { VscThreeBars } from "react-icons/vsc";
 
 const Navbar = () => {
   const [showNewComponent, setShowNewComponent] = useState(false);
@@ -14,6 +15,11 @@ const Navbar = () => {
     setShowNewComponent((prevState) => !prevState); // Toggles the state
   };
 
+  const ShowMenu =()=>{
+    const a= document.getElementsByClassName('TreeLine')
+    a.click
+  }
+
   return (
     <header className="w-full h-[101px] bg-white flex items-center justify-between px-6 shadow-md fixed top-0 left-0 z-50">
       {/* Logo Section */}
@@ -23,11 +29,11 @@ const Navbar = () => {
           className="text-4xl text-gray-800 cursor-pointer"
           aria-label="Toggle Sidebar"
         />
-        <span className="text-4xl text-gray-800 cursor-pointer sm:text-3xl md:text-4xl lg:text-5xl">Soar Task</span>
+        <span className="text-2xl text-gray-800 cursor-pointer sm:text-3xl md:text-4xl lg:text-3xl">Soar Task</span>
       </div>
 
       {/* Center Section (Overview or Page Title) */}
-      
+      <div onClick={ShowMenu} className="ThreeLine text-3xl gap-7"><VscThreeBars /></div>
       <div className="md:flex flex-1 justify-start mr-24 md:mr-72">
         <h1 className="text-xl md:text-2xl font-bold text-gray-800">Overview</h1>
       </div>
