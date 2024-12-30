@@ -18,6 +18,8 @@ const Sidebar = () => {
     setCurrentComponent(<ProfileForm/>); // Set the ProfileForm component when "Settings" is clicked
   };
 
+  
+
   return (
     <div className="  hidden md:flex md:flex-row md:h-screen md:overflow-hidden"> 
       {/* Sidebar */}
@@ -62,10 +64,9 @@ const Sidebar = () => {
       {/* Main Content */}
       <div className="ml-[240px] p-6 flex-grow">
         {currentComponent || (
-          <div className="text-gray-600">
-            <h1 className="text-2xl font-bold">Welcome</h1>
-            <p>Select an option from the menu to display content here.</p>
-          </div>
+           <div className="absolute w-[1110px] h-[1020px] top-[125px] left-[290px] flex gap-[30px] opacity-0">
+          <Dashboard/>
+         </div>
         )}
       </div>
     </div>
