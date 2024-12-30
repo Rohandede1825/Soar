@@ -1,25 +1,33 @@
 import React from 'react';
 import { IoMdMenu } from "react-icons/io";
 import { FaClipboardList } from "react-icons/fa6";
+import { useState } from 'react';
+import Sidebar from './Sidebar';
 
 const Navbar = () => {
 
-  const toggleMenu = () => {
-    const menu = document.querySelector('.menuOption');
-    if (menu) menu.classList.toggle('hidden');
-  };
+  const [showNewComponent, setShowNewComponent] = useState(false); 
+  
 
   function Hamburger() {
     let menu = document.querySelector('.menuOption');
     menu.classList.toggle('hidden');
   }
 
+  // Function to handle click on the FaClipboardList icon
+  const handleIconClick = () => {
+    setShowNewComponent(showNewComponent); // Toggle the visibility of the new component
+  };
+
   return (
     <header className="w-full h-[101px] bg-white flex items-center justify-between px-6 shadow-md fixed top-0 left-0 z-50">
       
       {/* Logo Section */}
       <div className=" items-center space-x-3 flex-1  hidden lg:flex">
-        <FaClipboardList className="text-4xl text-gray-800" />
+      <FaClipboardList
+            onClick={handleIconClick}
+            className="text-4xl text-gray-800 cursor-pointer"
+          />
         <span className="text-2xl lg:text-xl font-bold text-gray-800">Soar Task</span>
       </div>
       {/* Center Section (Overview or Page Title) */}
@@ -32,27 +40,23 @@ const Navbar = () => {
       
 
       {/* Right Section (Search Bar and User Controls) */}
-      <div className="flex items-center space-x-6 flex-1 justify-end">
-        <button
-          onClick={toggleMenu}
-          className="text-3xl lg:hidden cursor-pointer focus:outline-none"
-          aria-label="Toggle Menu"
-        >
-        </button>
+      <div className="flex items-center space-x-6 flex-1 justify-end m-5 ">
+     
 
         <input
           type="text"
           placeholder="Search for something"
           className="hidden md:block bg-gray-200 rounded-full py-2 px-4 w-[250px] focus:outline-none focus:ring-2 focus:ring-blue-400"
         />
+
         <i className="fas fa-cog text-2xl text-gray-500 cursor-pointer hover:text-gray-800"></i>
         <i className="fas fa-bell text-2xl text-gray-500 cursor-pointer hover:text-gray-800"></i>
         <img
           src="https://media.istockphoto.com/id/1354842602/photo/portrait-of-a-young-businesswoman-working-on-a-laptop-in-an-office.jpg?s=612x612&w=0&k=20&c=kfP1g2712RiaxsDriIxFo363ARlaL2D591s-22CnIo8="
           alt="User profile"
-          className="rounded-full cursor-pointer hover:opacity-80"
-          width="40"
-          height="40"
+          className="rounded-full cursor-pointer hover:opacity-80 text-3xl  "
+          width="70"
+          height="70"
         />
       </div>
     </header>

@@ -9,11 +9,11 @@ import BalanceHistory from "./BalanceHistory.jsx";
 function Dashboard() {
     return (
         <div
-            className="relative bg-gray-100 top-[125px] left-[200] p-6 rounded-lg shadow-lg scroll"
+            className="absolute bg-gray-100 top-[125px] left-[200] p-6 rounded-lg shadow-lg  overflow-y-auto"
             style={{ width: "1200px", height: "auto", gap: "30px" }}
         >
             {/* Dashboard Sections */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-[30px]">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-[30px] ">
                 {/* My Cards Section */}
                 <div className="lg:col-span-2">
                     <div className="flex justify-between items-center mb-6">
@@ -119,8 +119,8 @@ function Dashboard() {
 
                 {/* Weekly Activity Chart */}
                 <div className="lg:col-span-2">
-                    <h2 className="text-lg font-bold mb-6">Weekly Activity</h2>
-                    <div className="bg-gray-200 p-6 rounded-lg shadow">
+                    <h2 className="text-lg font-bold mb-6 ">Weekly Activity</h2>
+                    <div className="bg-gray-200 p-6 rounded-lg shadow h-[360px]">
                         <WeeklyActivityChart />
                     </div>
                 </div>
@@ -136,7 +136,7 @@ function Dashboard() {
                 {/* Quick Transfer */}
                 <div>
                     <h2 className="text-lg font-bold mb-6">Quick Transfer</h2>
-                    <div className="bg-gray-100 p-6 rounded-lg shadow">
+                    <div className="bg-gray-100 p-6 rounded-lg  mt-7">
                         <QuickTransferComponent />
                     </div>
                 </div>
@@ -144,7 +144,7 @@ function Dashboard() {
                 {/* Balance History */}
                 <div className="lg:col-span-2">
                     <h2 className="text-lg font-bold mb-6">Balance History</h2>
-                    <div className="bg-gray-200 p-6 rounded-lg shadow">
+                    <div className=" p-6 rounded-lg  ">
                         <BalanceHistory />
                     </div>
                 </div>

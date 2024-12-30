@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { TiHome } from "react-icons/ti";
 import { GrTransaction } from "react-icons/gr";
-import { MdManageAccounts, MdMiscellaneousServices } from "react-icons/md";
+import { MdDisabledByDefault, MdManageAccounts, MdMiscellaneousServices } from "react-icons/md";
 import { RiStockFill } from "react-icons/ri";
 import { TbCreditCardFilled } from "react-icons/tb";
 import { FaHandHoldingUsd } from "react-icons/fa";
@@ -30,6 +30,7 @@ const Sidebar = () => {
               {
                  icon: <TiHome />, 
                  label: "Dashboard", 
+                 MdDisabledByDefault: () => setCurrentComponent(<Dashboard/>),
                  onClick: () => setCurrentComponent(<Dashboard/>) },
               { icon: <GrTransaction />, label: "Transactions", onClick: () => setCurrentComponent(null) },
               { icon: <MdManageAccounts />, label: "Accounts", onClick: () => setCurrentComponent(null) },
