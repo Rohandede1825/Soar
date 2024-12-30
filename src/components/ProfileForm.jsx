@@ -2,10 +2,10 @@ import React from "react";
 
 const ProfileForm = () => {
   return (
-    <div className="mx-auto my-28 p-8 bg-white border border-gray-300 rounded-lg shadow-md max-w-6xl">
+    <div className=" mx-auto my-28 p-8 bg-white border border-gray-300 rounded-lg shadow-md max-w-6xl">
       {/* Tabs */}
       <div className="flex space-x-8 border-b border-gray-200 pb-4 mb-6">
-        <button className="text-blue-500 font-semibold border-b-2 border-blue-500 pb-2">Edit Profile</button>
+        <button className="text-blueS-500 font-semibold border-b-2 border-blue-500 pb-2">Edit Profile</button>
         <button className="text-gray-500 hover:text-blue-500">Preferences</button>
         <button className="text-gray-500 hover:text-blue-500">Security</button>
       </div>
