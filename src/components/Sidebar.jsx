@@ -8,31 +8,36 @@ import { FaHandHoldingUsd } from "react-icons/fa";
 import { VscLightbulbSparkle } from "react-icons/vsc";
 import { IoIosSettings } from "react-icons/io";
 import ProfileForm from './ProfileForm'; // Import your ProfileForm component
+import Dashboard from './dashboard';
+
 
 const Sidebar = () => {
-  const [currentComponent, setCurrentComponent] = useState(ProfileForm); // State to manage the current component
+  const [currentComponent, setCurrentComponent] = useState(); // State to manage the current component
 
   const handleSettingsClick = () => {
-    setCurrentComponent(<ProfileForm />); // Set the ProfileForm component when "Settings" is clicked
+    setCurrentComponent(<ProfileForm/>); // Set the ProfileForm component when "Settings" is clicked
   };
 
   return (
-    <div className="flex">
+    <div className="  hidden md:flex md:flex-row md:h-screen md:overflow-hidden"> 
       {/* Sidebar */}
       <div
-        className="menuOption bg-white w-[240px] h-[100vh] p-6 shadow-md mt-20 fixed top-0 left-0"
+        className="menuOption bg-white w-[240px] h-[100vh] p-6 shadow-md mt-20 fixed top-0 left-0 hidden md:block"
       >
         <nav>
-          <ul className="md:text-xl md:space-y-5 text-2xl space-y-6">
+          <ul className="md:text-xl  text-2xl  font-semibold">
             {[
-              { icon: <TiHome />, label: "Dashboard", onClick: () => setCurrentComponent(null) },
+              {
+                 icon: <TiHome />, 
+                 label: "Dashboard", 
+                 onClick: () => setCurrentComponent(<Dashboard/>) },
               { icon: <GrTransaction />, label: "Transactions", onClick: () => setCurrentComponent(null) },
               { icon: <MdManageAccounts />, label: "Accounts", onClick: () => setCurrentComponent(null) },
               { icon: <RiStockFill />, label: "Investments", onClick: () => setCurrentComponent(null) },
               { icon: <TbCreditCardFilled />, label: "Credit Cards", onClick: () => setCurrentComponent(null) },
               { icon: <FaHandHoldingUsd />, label: "Loans", onClick: () => setCurrentComponent(null) },
               { icon: <MdMiscellaneousServices />, label: "Services", onClick: () => setCurrentComponent(null) },
-              { icon: <VscLightbulbSparkle />, label: "My Privileges", onClick: () => setCurrentComponent(<ProfileForm/>) },
+              { icon: <VscLightbulbSparkle />, label: "My Privileges", onClick: () => setCurrentComponent(null) },
               { 
                 icon: <IoIosSettings />, 
                 label: "Settings", 

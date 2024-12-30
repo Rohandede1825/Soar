@@ -8,21 +8,26 @@ import Dashboard from './components/dashboard'
 // import WeeklyActivity from './components/chart.jsx'
 import Sidebar from './components/Sidebar.jsx'
 import Navbar from './components/Navbar.jsx'
+import ProfileForm from './components/ProfileForm.jsx'
+
 
 function App() {
 
   return (
     <>
-   
-     <Navbar/>
-     
 
-     < Dashboard />
-     {/* <WeeklyActivityChart/> */}
-     
-     <Sidebar/>
-      {/* <WeeklyActivity /> */}
-    
+      <Navbar />
+
+      {/* <Dashboard /> */}
+      {/* <Dashboard /> */}
+
+
+      <Sidebar />
+
+    {/* if(!Sidebar){
+      <Dashboard />
+    }  */}
+
     </>
   )
 }

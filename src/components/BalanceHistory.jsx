@@ -33,10 +33,11 @@ const BalanceHistory = () => {
         display: false, // Hide the legend
       },
     },
+    maintainAspectRatio: false, // Allow the chart to adjust height dynamically
   };
 
   return (
-    <div className="w-670px  gap-20">
+    <div className="w-full lg:w-[670px] h-[300px] lg:h-[330px] p-4 bg-gray-100 rounded-lg shadow-md">
       <Line data={data} options={options} />
     </div>
   );

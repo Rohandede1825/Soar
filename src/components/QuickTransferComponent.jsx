@@ -15,10 +15,10 @@ const QuickTransferComponent = () => {
     };
 
     return (
-        <div className='bg-gray-100 gap-[18px]   lg:w-720] h-[360px] rounded-lg'>
+        <div className='bg-gray-100  rounded-lg'>
            
 
-            <div className=" bg-white rounded-lg p-5 mr-3  ">
+            <div className=" bg-white rounded-lg p-5   ">
 
                 <div className="flex items-center mb-4 ">
 
