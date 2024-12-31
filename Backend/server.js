@@ -48,6 +48,22 @@ app.get("/get-profile", (req, res) => {
     res.status(500).json({ message: "Failed to fetch profile data." });
   }
 });
+app.post("/",(req,res)=>{
+  res.send("pro")
+})
+
+
+//demo data from graphData.json 
+app.get("/graphData",(req,res)=>{
+  const graphDataFilePath = path.join(__dirname, "graphData.json");
+  if (fs.existsSync(graphDataFilePath)) {
+    const rawData = fs.readFileSync(graphDataFilePath);
+    const graphData = JSON.parse(rawData);
+    res.json(graphData);
+  } else {
+    res.status(404).json({ message: "No graph data found." });
+  }
+})
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
