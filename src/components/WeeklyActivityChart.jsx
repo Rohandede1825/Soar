@@ -1,10 +1,51 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
 import { Bar } from 'react-chartjs-2';
 import { Chart as ChartJS } from 'chart.js/auto'; 
 import { BiFullscreen } from 'react-icons/bi';
+ChartJS.register(ArcElement, Tooltip, Legend);
+
+
+
+const chartOptions = {
+  responsive: true, // Enable responsiveness
+  maintainAspectRatio: false, // Allow the chart to adjust to the container size
+  plugins: {
+    legend: {
+      display: true,
+      position: 'top',
+      labels: {
+        color: '#4B5563', // Gray text
+      },
+    },
+  },
+  scales: {
+    x: {
+      grid: {
+        display: false,
+      },
+      ticks: {
+        color: '#4B5563', // Gray text
+      },
+    },
+    y: {
+      grid: {
+        color: '#E5E7EB', // Light gray grid lines
+      },
+      ticks: {
+        color: '#4B5563', // Gray text
+      },
+    },
+  },
+};
+
+
+
 
 const WeeklyActivityChart = () => {
-  const chartData = {
+
+    const [chartData, setChartData] = useState({
+  
     labels: ['Sat', 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
     datasets: [
       {
@@ -22,39 +63,39 @@ const WeeklyActivityChart = () => {
         borderWidth: 1,
       },
     ],
-  };
+  
+});
 
-  const chartOptions = {
-    responsive: true, // Enable responsiveness
-    maintainAspectRatio: false, // Allow the chart to adjust to the container size
-    plugins: {
-      legend: {
-        display: true,
-        position: 'top',
-        labels: {
-          color: '#4B5563', // Gray text
-        },
-      },
-    },
-    scales: {
-      x: {
-        grid: {
-          display: false,
-        },
-        ticks: {
-          color: '#4B5563', // Gray text
-        },
-      },
-      y: {
-        grid: {
-          color: '#E5E7EB', // Light gray grid lines
-        },
-        ticks: {
-          color: '#4B5563', // Gray text
-        },
-      },
-    },
-  };
+
+useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://localhost:5000/graphData');
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        setChartData((prevData) => ({
+          ...prevData,
+          datasets: [
+            {
+              ...prevData.datasets[0],
+              data: data.graphdata,
+            },
+          ],
+        }));
+      } catch (error) {
+        console.error('Error fetching graph data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+
+
+
+  
 
   return (
     <div className="sw-full h-full rounded-lg bg-gray-200 shadow-lg p-4">
