@@ -3,6 +3,7 @@ import { IoMdMenu } from "react-icons/io";
 import { FaClipboardList } from "react-icons/fa6";
 import Sidebar from "./Sidebar";
 import { VscThreeBars } from "react-icons/vsc";
+import Dashboard from "./Home";
 
 const Navbar = () => {
   const [showNewComponent, setShowNewComponent] = useState(false);

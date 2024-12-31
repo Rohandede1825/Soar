@@ -8,7 +8,7 @@ import { FaHandHoldingUsd } from "react-icons/fa";
 import { VscLightbulbSparkle } from "react-icons/vsc";
 import { IoIosSettings } from "react-icons/io";
 import ProfileForm from './ProfileForm'; // Import your ProfileForm component
-import Dashboard from './dashboard';
+import Dashboard from "./Home.jsx";
 
 
 const Sidebar = () => {
