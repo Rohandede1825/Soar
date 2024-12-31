@@ -9,11 +9,11 @@ import BalanceHistory from "./BalanceHistory.jsx";
 function Home() {
     return (
         <div
-            className="absolute bg-gray-100 top-[125px] left-[200] p-6 rounded-lg shadow-lg scroll-ml-12  overflow-y-auto"
-            style={{ width: "1200px", height: "auto", gap: "30px" }}
+            className="absolute bg-gray-100 top-[125px] left-0 lg:left-[200px] p-6 rounded-lg shadow-lg overflow-y-auto"
+            style={{ width: "100%", maxWidth: "1200px" }}
         >
             {/* Dashboard Sections */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-[30px] ">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {/* My Cards Section */}
                 <div className="lg:col-span-2">
                     <div className="flex justify-between items-center mb-6">
@@ -22,10 +22,9 @@ function Home() {
                             See All
                         </a>
                     </div>
-
-                    <div className="flex flex-col lg:flex-row gap-4">
+                    <div className="flex flex-col md:flex-row gap-4">
                         {/* Card 1 */}
-                        <div className="bg-gradient-to-r from-gray-700 to-gray-900 p-7 rounded-2xl text-white w-full max-w-[360px] h-[235px]">
+                        <div className="bg-gradient-to-r from-gray-700 to-gray-900 p-7 rounded-2xl text-white w-full max-w-[360px] h-auto lg:h-[235px]">
                             <div className="flex justify-between">
                                 <div>
                                     <span className="block text-sm">Balance</span>
@@ -45,9 +44,8 @@ function Home() {
                             </div>
                             <div className="text-lg mt-4">3778 **** **** 1234</div>
                         </div>
-
                         {/* Card 2 */}
-                        <div className="bg-white p-7 rounded-2xl w-full max-w-[360px] h-[235px] shadow">
+                        <div className="bg-white p-7 rounded-2xl w-full max-w-[360px] h-auto lg:h-[235px] shadow">
                             <div className="flex justify-between">
                                 <div>
                                     <span className="block text-sm">Balance</span>
@@ -73,7 +71,7 @@ function Home() {
                 {/* Recent Transactions */}
                 <div>
                     <h2 className="text-lg font-bold mb-6">Recent Transactions</h2>
-                    <div className="bg-white p-4 rounded-lg shadow h-auto w-96">
+                    <div className="bg-white p-4 rounded-lg shadow h-auto w-full max-w-[360px]">
                         {[
                             {
                                 icon: <FaCreditCard className="text-yellow-500" />,
@@ -119,8 +117,8 @@ function Home() {
 
                 {/* Weekly Activity Chart */}
                 <div className="lg:col-span-2">
-                    <h2 className="text-lg font-bold mb-6 ">Weekly Activity</h2>
-                    <div className="bg-gray-200 p-6 rounded-lg shadow h-[360px]">
+                    <h2 className="text-lg font-bold mb-6">Weekly Activity</h2>
+                    <div className="bg-gray-200 p-6 rounded-lg shadow h-[360px] w-full">
                         <WeeklyActivityChart />
                     </div>
                 </div>
@@ -128,7 +126,7 @@ function Home() {
                 {/* Expense Statistics */}
                 <div>
                     <h2 className="text-lg font-bold mb-6">Expense Statistics</h2>
-                    <div className="bg-white p-6 rounded-lg shadow">
+                    <div className="bg-white p-6 rounded-lg shadow w-full max-w-[360px]">
                         <PieChart />
                     </div>
                 </div>
@@ -136,7 +134,7 @@ function Home() {
                 {/* Quick Transfer */}
                 <div>
                     <h2 className="text-lg font-bold mb-6">Quick Transfer</h2>
-                    <div className="bg-gray-100 p-6 rounded-lg  mt-7">
+                    <div className="bg-gray-100 p-6 rounded-lg shadow w-full max-w-[360px]">
                         <QuickTransferComponent />
                     </div>
                 </div>
@@ -144,7 +142,7 @@ function Home() {
                 {/* Balance History */}
                 <div className="lg:col-span-2">
                     <h2 className="text-lg font-bold mb-6">Balance History</h2>
-                    <div className=" p-6 rounded-lg  ">
+                    <div className="p-6 rounded-lg bg-white shadow h-[360px] w-full">
                         <BalanceHistory />
                     </div>
                 </div>
