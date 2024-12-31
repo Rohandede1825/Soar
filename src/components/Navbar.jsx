@@ -48,7 +48,7 @@ const Navbar = () => {
         <img
           src="https://media.istockphoto.com/id/1354842602/photo/portrait-of-a-young-businesswoman-working-on-a-laptop-in-an-office.jpg?s=612x612&w=0&k=20&c=kfP1g2712RiaxsDriIxFo363ARlaL2D591s-22CnIo8="
           alt="User profile"
-          className="rounded-full cursor-pointer hover:opacity-80 ml-3 w-[60px] h-[60px] mr-7"
+          className="rounded-full cursor-pointer hover:opacity-80 ml-3 w-[60px] h-[60px] mr-7 md:w-[50px] md:[50px]"
           width=""
           height=""
         />
