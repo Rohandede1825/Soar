@@ -6,6 +6,9 @@
   "engines": {
   "node": "22.x",
   "npm": "10.x"
-}
+},
+"scripts": {
+    "build": "node index.js"
+  }
 
 }

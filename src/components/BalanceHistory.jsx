@@ -54,7 +54,7 @@ const BalanceHistory = () => {
             datasets: [
               {
                 ...prevData.datasets[0],
-                data: data.weeklygraph,
+                data: data.weeklygraph || [10,20,30,80,50,60,70],
                 
               },
               

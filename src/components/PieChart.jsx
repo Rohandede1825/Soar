@@ -50,7 +50,7 @@ const PieChart = () => {
           datasets: [
             {
               ...prevData.datasets[0],
-              data: data.piedata,
+              data: data.piedata || [30,35,15,25],
             },
           ],
         }));

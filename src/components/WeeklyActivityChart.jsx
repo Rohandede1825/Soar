@@ -80,12 +80,12 @@ useEffect(() => {
           datasets: [
             {
               ...prevData.datasets[0],
-              data: data.graphdataDeposit,
+              data: data.graphdataDeposit || [100,200,300,400,500,600,700],
               
             },
             {
               ...prevData.datasets[1],
-              data: data.graphdataWithdraw,
+              data: data.graphdataWithdraw || [100,200,300,400,500,600,700],
             }
           ],
         }));
