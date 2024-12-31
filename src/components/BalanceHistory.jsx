@@ -44,7 +44,7 @@ const BalanceHistory = () => {
   useEffect(() => {
       const fetchData = async () => {
         try {
-          const response = await fetch('http://localhost:5000/graphData');
+          const response = await fetch('https://soar-backend-57sp.onrender.com/getData');//https://soar-backend-57sp.onrender.com:5000/graphData
           if (!response.ok) {
             throw new Error('Network response was not ok');
           }
