@@ -16,10 +16,9 @@ const QuickTransferComponent = () => {
 
     return (
         <div className='bg-gray-100  rounded-lg'>
-           
 
-            <div className=" bg-white rounded-lg p-5   ">
 
+            <div className=" bg-white rounded-lg p-5">
                 <div className="flex items-center mb-4 ">
 
                     <div className='flex justify-center items-center p-4'>
@@ -54,7 +53,7 @@ const QuickTransferComponent = () => {
                     </div>
 
 
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-14 h-7">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-14 h-7">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                     </svg>
                 </div>
@@ -65,7 +64,7 @@ const QuickTransferComponent = () => {
                     <input type="text" placeholder="0.00" className="w-24 p-2 border border-gray-300 rounded-md" />
                     <button className="bg-blue-500 text-white px-4 py-2 rounded-md flex items-center">
                         <span>Send</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-5 h-5 ml-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 ml-2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M14.75 2.25L2.25 14.75M5.25 9.75l7.5-7.5 7.5 7.5" />
                         </svg>
                     </button>

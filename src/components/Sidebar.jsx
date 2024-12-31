@@ -8,11 +8,11 @@ import { FaHandHoldingUsd } from "react-icons/fa";
 import { VscLightbulbSparkle } from "react-icons/vsc";
 import { IoIosSettings } from "react-icons/io";
 import ProfileForm from './ProfileForm'; // Import your ProfileForm component
-import Dashboard from "./Home.jsx";
+import Home from "./Home.jsx";
 
 
 const Sidebar = () => {
-  const [currentComponent, setCurrentComponent] = useState(<Dashboard/>); // State to manage the current component
+  const [currentComponent, setCurrentComponent] = useState(<Home/>); // State to manage the current component
 
   const handleSettingsClick = () => {
     setCurrentComponent(<ProfileForm/>); // Set the ProfileForm component when "Settings" is clicked
@@ -29,8 +29,8 @@ const Sidebar = () => {
               {
                  icon: <TiHome />, 
                  label: "Dashboard", 
-                 MdDisabledByDefault: () => setCurrentComponent(<Dashboard/>),
-                 onClick: () => setCurrentComponent(<Dashboard/>) },
+                 MdDisabledByDefault: () => setCurrentComponent(<Home/>),
+                 onClick: () => setCurrentComponent(<Home/>) },
               { icon: <GrTransaction />, label: "Transactions", onClick: () => setCurrentComponent(null) },
               { icon: <MdManageAccounts />, label: "Accounts", onClick: () => setCurrentComponent(null) },
               { icon: <RiStockFill />, label: "Investments", onClick: () => setCurrentComponent(null) },
@@ -62,7 +62,7 @@ const Sidebar = () => {
       <div className="ml-[240px] p-6 flex-grow">
         {currentComponent || (
            <div className="absolute w-[1110px] h-[1020px] top-[125px] left-[290px] flex gap-[30px] opacity-0">
-          <Dashboard/>
+          <Home/>
          </div>
         )}
       </div>

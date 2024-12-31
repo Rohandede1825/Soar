@@ -1,40 +1,34 @@
 import React, { useState } from "react";
 import { IoMdMenu } from "react-icons/io";
 import { FaClipboardList } from "react-icons/fa6";
-import Sidebar from "./Sidebar";
+
 import { VscThreeBars } from "react-icons/vsc";
-import Dashboard from "./Home";
+import Home from "./Home"; // Import Home component
 
 const Navbar = () => {
-  const [showNewComponent, setShowNewComponent] = useState(false);
-
-  // Toggle sidebar visibility for the hamburger menu
  
+  const [showHomeComponent, setShowHomeComponent] = useState(false); // State for Home component
 
   // Function to handle click on the FaClipboardList icon
-  const handleIconClick = () => {
-    setShowNewComponent((prevState) => !prevState); // Toggles the state
-  };
+ 
 
-  const ShowMenu =()=>{
-    const a= document.getElementsByClassName('TreeLine')
-    a.click
-  }
+  // Function to handle the menu icon click and show the Home component
+  const ShowMenu = () => {
+    setShowHomeComponent((prevState) => !prevState); // Toggles the Home component visibility
+  };
 
   return (
     <header className="w-full h-[101px] bg-white flex items-center justify-between px-6 shadow-md fixed top-0 left-0 z-50">
       {/* Logo Section */}
       <div className="items-center space-x-3 flex-1 hidden lg:flex">
         <FaClipboardList
-          onClick={handleIconClick}
-          className="text-4xl text-gray-800 cursor-pointer"
-          aria-label="Toggle Sidebar"
+          
         />
         <span className="text-2xl text-gray-800 cursor-pointer sm:text-3xl md:text-4xl lg:text-3xl">Soar Task</span>
       </div>
 
       {/* Center Section (Overview or Page Title) */}
-      <div onClick={ShowMenu} className="ThreeLine text-3xl gap-7"><VscThreeBars /></div>
+      <div onClick={ShowMenu} className="ThreeLine text-3xl gap-7 md:hidden"><VscThreeBars /></div>
       <div className="md:flex flex-1 justify-start mr-24 md:mr-72">
         <h1 className="text-xl md:text-2xl font-bold text-gray-800">Overview</h1>
       </div>
@@ -58,8 +52,9 @@ const Navbar = () => {
         />
       </div>
 
-      {/* Render new component if toggled */}
-      {showNewComponent && <Sidebar />}
+      
+      {/* Render Home Component if toggled */}
+      {showHomeComponent && <Home />}
     </header>
   );
 };

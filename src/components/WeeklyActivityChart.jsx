@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { Bar } from 'react-chartjs-2';
 import { Chart as ChartJS } from 'chart.js/auto'; 
 import { BiFullscreen } from 'react-icons/bi';
-ChartJS.register(ArcElement, Tooltip, Legend);
+
 
 
 
@@ -50,14 +50,14 @@ const WeeklyActivityChart = () => {
     datasets: [
       {
         label: 'Deposit',
-        data: [400, 200, 300, 500, 100, 300, 400],
+        data: [],
         backgroundColor: 'rgba(59, 130, 246, 0.7)', // Blue color
         borderColor: 'rgba(59, 130, 246, 1)',
         borderWidth: 1,
       },
       {
         label: 'Withdraw',
-        data: [500, 300, 400, 450, 200, 350, 450],
+        data: [],
         backgroundColor: 'rgba(0, 0, 0, 0.7)', // Black color
         borderColor: 'rgba(0, 0, 0, 1)',
         borderWidth: 1,
@@ -80,8 +80,13 @@ useEffect(() => {
           datasets: [
             {
               ...prevData.datasets[0],
-              data: data.graphdata,
+              data: data.graphdataDeposit,
+              
             },
+            {
+              ...prevData.datasets[1],
+              data: data.graphdataWithdraw,
+            }
           ],
         }));
       } catch (error) {

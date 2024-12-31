@@ -6,7 +6,7 @@ import PieChart from "./PieChart.jsx";
 import QuickTransferComponent from "./QuickTransferComponent.jsx";
 import BalanceHistory from "./BalanceHistory.jsx";
 
-function Dashboard() {
+function Home() {
     return (
         <div
             className="absolute bg-gray-100 top-[125px] left-[200] p-6 rounded-lg shadow-lg scroll-ml-12  overflow-y-auto"
@@ -153,4 +153,4 @@ function Dashboard() {
     );
 }
 
-export default Dashboard;
+export default Home;
