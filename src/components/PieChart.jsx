@@ -19,7 +19,7 @@ const PieChart = () => {
     datasets: [
       {
         label: 'Expense Distribution',
-        data: [],
+        data: [30,35,15,20],
         backgroundColor: [
           'rgba(54, 162, 235, 0.8)',
           'rgba(255, 99, 132, 0.8)',
@@ -50,7 +50,7 @@ const PieChart = () => {
           datasets: [
             {
               ...prevData.datasets[0],
-              data: data.piedata || [30,35,15,25],
+              data: data.piedata || [30,35,15,20],
             },
           ],
         }));

@@ -50,14 +50,14 @@ const WeeklyActivityChart = () => {
     datasets: [
       {
         label: 'Deposit',
-        data: [],
+        data: [100,200,300,400,500,600,700],
         backgroundColor: 'rgba(59, 130, 246, 0.7)', // Blue color
         borderColor: 'rgba(59, 130, 246, 1)',
         borderWidth: 1,
       },
       {
         label: 'Withdraw',
-        data: [],
+        data:  [100,200,300,800,500,600,700],
         backgroundColor: 'rgba(0, 0, 0, 0.7)', // Black color
         borderColor: 'rgba(0, 0, 0, 1)',
         borderWidth: 1,
