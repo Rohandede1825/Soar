@@ -32,7 +32,7 @@ const BalanceHistory = () => {
     datasets: [
       {
         label: 'Balance',
-        data: [],
+        data: [10,20,30,80,50,60,70],
         fill: true,
         backgroundColor: 'rgba(0, 0, 255, 0.2)', // Light blue fill
         borderColor: 'blue',
@@ -44,7 +44,7 @@ const BalanceHistory = () => {
   useEffect(() => {
       const fetchData = async () => {
         try {
-          const response = await fetch('https://soar-backend-57sp.onrender.com/getData');//https://soar-backend-57sp.onrender.com:5000/graphData
+          const response = await fetch('https:localhost:5000/getData');//https://soar-backend-57sp.onrender.com:5000/graphData
           if (!response.ok) {
             throw new Error('Network response was not ok');
           }
