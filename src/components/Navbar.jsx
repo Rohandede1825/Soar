@@ -26,7 +26,7 @@ const Navbar = () => {
         <VscThreeBars />
       </div>
       <div className="md:flex flex-1 justify-start mr-24 md:mr-72">
-        <h1 className="text-5xl  md:text-2xl font-bold text-gray-800">Overview</h1>
+        <h1 className="text-3xl  md:text-2xl font-bold text-gray-800  ml-3">Overview</h1>
       </div>
 
       {/* Right Section (Search Bar and User Controls) */}

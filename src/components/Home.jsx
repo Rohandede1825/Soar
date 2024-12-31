@@ -22,7 +22,7 @@ function Home() {
                             See All
                         </a>
                     </div>
-                    <div className="flex flex-col md:flex-row gap-4">
+                    <div className="flex flex-col md:flex-row gap-4 ">
                         {/* Card 1 */}
                         <div className="bg-gradient-to-r from-gray-700 to-gray-900 p-7 rounded-2xl text-white w-full max-w-[360px] h-auto lg:h-[235px]">
                             <div className="flex justify-between">
@@ -71,7 +71,7 @@ function Home() {
                 {/* Recent Transactions */}
                 <div>
                     <h2 className="text-lg font-bold mb-6">Recent Transactions</h2>
-                    <div className="bg-white p-4 rounded-lg shadow h-auto w-full max-w-[360px]">
+                    <div className="bg-white p-4 rounded-lg shadow h-auto w-full max-w-[360px] ">
                         {[
                             {
                                 icon: <FaCreditCard className="text-yellow-500" />,
@@ -126,7 +126,7 @@ function Home() {
                 {/* Expense Statistics */}
                 <div>
                     <h2 className="text-lg font-bold mb-6">Expense Statistics</h2>
-                    <div className="bg-white p-6 rounded-lg shadow w-full max-w-[360px]">
+                    <div className="bg-white p-6 rounded-lg shadow w-full max-w-[380px]">
                         <PieChart />
                     </div>
                 </div>
