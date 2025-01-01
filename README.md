@@ -1,8 +1,92 @@
-# React + Vite
+# Soar Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+Soar is a modern web application built with React, Vite, and Tailwind CSS. It features a responsive design with a sidebar, navbar, and various components such as Home and ProfileForm. The project uses Chart.js for data visualization and includes ESLint for code quality.
 
-Currently, two official plugins are available:
+## Table of Contents
+- [Overview](#overview)
+- [Setup](#setup)
+    - [Frontend](#frontend)
+    - [Backend](#backend)
+- [Scripts](#scripts)
+- [Dependencies](#dependencies)
+    - [Main Dependencies](#main-dependencies)
+    - [Dev Dependencies](#dev-dependencies)
+- [Components](#components)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Setup
+
+### Frontend
+1. **Clone the repository:**
+     ```sh
+     git clone https://github.com/yourusername/soar.git
+     cd soar
+     ```
+
+2. **Install dependencies:**
+     ```sh
+     npm install
+     ```
+
+3. **Run the development server:**
+     ```sh
+     npm run dev
+     ```
+
+### Backend
+Currently, this project does not include a backend setup. You can integrate your own backend services as needed.
+
+## Scripts
+- **Start development server:**
+    ```sh
+    npm run dev
+    ```
+- **Build for production:**
+    ```sh
+    npm run build
+    ```
+- **Lint the code:**
+    ```sh
+    npm run lint
+    ```
+- **Preview the production build:**
+    ```sh
+    npm run preview
+    ```
+- **Build CSS with Tailwind:**
+    ```sh
+    npm run build:css
+    ```
+
+## Dependencies
+
+### Main Dependencies
+- `chart.js`: ^4.4.7
+- `nodemon`: ^3.1.9
+- `react`: ^18.3.1
+- `react-chartjs-2`: ^5.2.0
+- `react-dom`: ^18.3.1
+- `react-icons`: ^5.4.0
+
+### Dev Dependencies
+- `@eslint/js`: ^9.17.0
+- `@types/react`: ^18.3.18
+- `@types/react-dom`: ^18.3.5
+- `@vitejs/plugin-react`: ^4.3.4
+- `autoprefixer`: ^10.4.20
+- `eslint`: ^9.17.0
+- `eslint-plugin-react`: ^7.37.2
+- `eslint-plugin-react-hooks`: ^5.0.0
+- `eslint-plugin-react-refresh`: ^0.4.16
+- `globals`: ^15.14.0
+- `postcss`: ^8.4.49
+- `tailwindcss`: ^3.4.17
+- `vite`: ^6.0.6
+
+## Components
+- **Navbar:** The top navigation bar.
+- **Sidebar:** The side navigation menu.
+- **Home:** The main home component.
+- **ProfileForm:** The profile form component.
+
+Feel free to explore and contribute to the project!

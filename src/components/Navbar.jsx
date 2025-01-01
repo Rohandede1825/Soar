@@ -21,7 +21,7 @@ import Home from "./Home.jsx";
 const Navbar = () => {
   const [showSidebar, setShowSidebar] = useState(false); // State for Sidebar visibility
   const [showMenuOption, setShowMenuOption] = useState(false); // State for MenuOption visibility
-  const [currentComponent, setCurrentComponent] = useState(null); // State to manage current component rendering
+  const [currentComponent, setCurrentComponent] = useState(false); // State to manage current component rendering
 
   // Function to toggle the Sidebar
   const toggleSidebar = () => {
