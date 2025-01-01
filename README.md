@@ -28,12 +28,12 @@ Soar is a modern web application built with React, Vite, and Tailwind CSS. It fe
         cp /Soar/
         ```
 
-2. **Install dependencies:**
+3. **Install dependencies:**
      ```sh
      npm install
      ```
 
-3. **Run the development server:**
+4. **Run the development server:**
      ```sh
      npm run dev
      ```
