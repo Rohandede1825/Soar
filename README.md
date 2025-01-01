@@ -19,9 +19,14 @@ Soar is a modern web application built with React, Vite, and Tailwind CSS. It fe
 ### Frontend
 1. **Clone the repository:**
      ```sh
-     git clone https://github.com/yourusername/soar.git
-     cd soar
+     git clone https://github.com/Rohandede1825/Soar.git
+     cd Soar
      ```
+
+2. **Copy the to main Directory:**
+        ```sh
+        cp /Soar/
+        ```
 
 2. **Install dependencies:**
      ```sh
@@ -34,28 +39,20 @@ Soar is a modern web application built with React, Vite, and Tailwind CSS. It fe
      ```
 
 ### Backend
-Currently, this project does not include a backend setup. You can integrate your own backend services as needed.
-
-## Scripts
-- **Start development server:**
+1. **Clone the backend repository:**
     ```sh
-    npm run dev
+    git clone https://github.com/Rohandede1825/Soar-backend.git
+    cd Soar-backend
     ```
-- **Build for production:**
+
+2. **Install backend dependencies:**
+    ```sh
+    npm install
+    ```
+
+3. **Start the backend server:**
     ```sh
     npm run build
-    ```
-- **Lint the code:**
-    ```sh
-    npm run lint
-    ```
-- **Preview the production build:**
-    ```sh
-    npm run preview
-    ```
-- **Build CSS with Tailwind:**
-    ```sh
-    npm run build:css
     ```
 
 ## Dependencies
@@ -89,4 +86,3 @@ Currently, this project does not include a backend setup. You can integrate your
 - **Home:** The main home component.
 - **ProfileForm:** The profile form component.
 
-Feel free to explore and contribute to the project!
