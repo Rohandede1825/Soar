@@ -64,8 +64,8 @@ const Navbar = () => {
           className="hidden md:block bg-gray-200 rounded-full py-2 px-4 w-[250px] focus:outline-none focus:ring-2 focus:ring-blue-400 border-blue-400"
           aria-label="Search"
         />
-        <IoIosNotificationsOutline className="text-2xl text-blue-500 cursor-pointer hover:text-gray-800 hidden md:block" />
-        <SlSettings className="text-2xl text-blue-500 cursor-pointer hover:text-gray-800 hidden md:block" />
+        <IoIosNotificationsOutline className="text-4xl text-blue-500 cursor-pointer hover:text-gray-800 hidden md:block" />
+        <SlSettings className="text-3xl text-blue-500 cursor-pointer hover:text-gray-800 hidden md:block" />
         <img
           src="https://media.istockphoto.com/id/1354842602/photo/portrait-of-a-young-businesswoman-working-on-a-laptop-in-an-office.jpg?s=612x612&w=0&k=20&c=kfP1g2712RiaxsDriIxFo363ARlaL2D591s-22CnIo8="
           alt="User profile"
