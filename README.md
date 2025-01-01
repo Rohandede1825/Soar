@@ -23,17 +23,13 @@ Soar is a modern web application built with React, Vite, and Tailwind CSS. It fe
      cd Soar
      ```
 
-2. **Copy the to main Directory:**
-        ```sh
-        cp /Soar/
-        ```
 
-3. **Install dependencies:**
+2. **Install dependencies:**
      ```sh
      npm install
      ```
 
-4. **Run the development server:**
+3. **Run the development server:**
      ```sh
      npm run dev
      ```
@@ -44,13 +40,17 @@ Soar is a modern web application built with React, Vite, and Tailwind CSS. It fe
     git clone https://github.com/Rohandede1825/Soar-backend.git
     cd Soar-backend
     ```
+2. **Copy the to main Directory:**
+        ```sh
+        cp /Soar/
+        ```
 
-2. **Install backend dependencies:**
+3. **Install backend dependencies:**
     ```sh
     npm install
     ```
 
-3. **Start the backend server:**
+4. **Start the backend server:**
     ```sh
     npm run build
     ```
