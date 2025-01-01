@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { FaClipboardList } from "react-icons/fa6";
 import { VscThreeBars } from "react-icons/vsc";
-import Sidebar from "./Sidebar";
+import Sidebar from "./Sidebar.jsx";
+import { CiSearch } from "react-icons/ci";
+import { IoIosNotificationsOutline } from "react-icons/io";
+import { SlSettings } from "react-icons/sl";
 
 const Navbar = () => {
   const [showSidebar, setShowSidebar] = useState(false); // State for Sidebar visibility
@@ -12,7 +15,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="w-full  h-[101px] bg-white flex items-center justify-between px-3 shadow-md fixed top-0 left-0 z-50">
+    <header className="w-full h-[101px] bg-white flex items-center justify-between px-3 shadow-md fixed top-0 left-0 z-50">
       {/* Logo Section */}
       <div className="items-center space-x-3 flex-1 hidden lg:flex">
         <FaClipboardList />
@@ -25,30 +28,34 @@ const Navbar = () => {
       <div onClick={toggleSidebar} className="ThreeLine text-5xl gap-7 md:hidden">
         <VscThreeBars />
       </div>
-      <div className="md:flex flex-1  mr-24 md:mr-72">
-        <h1 className="text-3xl  md:text-2xl font-bold text-gray-800  ml-3">Overview</h1>
+      <div className="md:flex flex-1 mr-24 md:mr-72">
+        <h1 className="text-3xl md:text-2xl font-bold text-gray-800 ml-3 md:mr-[480px]">Overview</h1>
       </div>
 
       {/* Right Section (Search Bar and User Controls) */}
       <div className="flex items-center space-x-6 flex-1 justify-end">
         <input
           type="text"
-          placeholder="Search for something"
-          className="hidden md:block bg-gray-200 rounded-full py-2 px-4 w-[250px] focus:outline-none focus:ring-2 focus:ring-blue-400"
+          placeholder=" Search for something"
+          className="hidden md:block bg-gray-200 rounded-full py-2 px-4 w-[250px] focus:outline-none focus:ring-2 focus:ring-blue-400 border-blue-400"
           aria-label="Search"
         />
         <i
-          className="fas fa-cog text-2xl text-gray-500 cursor-pointer hover:text-gray-800"
-          aria-label="Settings"
-        ></i>
-        <i
-          className="fas fa-bell text-2xl text-gray-500 cursor-pointer hover:text-gray-800"
+          className="fas fa-bell text-2xl text-blue-500 cursor-pointer hover:text-gray-800 hidden md:block color-blue-400"
           aria-label="Notifications"
-        ></i>
+        >
+          <SlSettings />
+        </i>
+        <i
+          className="fas fa-cog text-2xl text-blue-500 cursor-pointer hover:text-gray-800 color-blue-400 hidden md:block color-blue-400"
+          aria-label="Settings"
+        >
+          <IoIosNotificationsOutline />
+        </i>
         <img
           src="https://media.istockphoto.com/id/1354842602/photo/portrait-of-a-young-businesswoman-working-on-a-laptop-in-an-office.jpg?s=612x612&w=0&k=20&c=kfP1g2712RiaxsDriIxFo363ARlaL2D591s-22CnIo8="
           alt="User profile"
-          className="rounded-full cursor-pointer hover:opacity-80 ml-3 w-[60px] h-[60px] mr-7 md:w-[50px] md:[]"
+          className="rounded-full cursor-pointer hover:opacity-80 ml-3 w-[60px] h-[60px] mr-7 md:w-[60px] md:[h-50]"
           width=""
           height=""
         />
@@ -56,9 +63,11 @@ const Navbar = () => {
 
       {/* Render Sidebar Component if toggled */}
       {showSidebar && (
-        <div className="fixed inset-0 bg-gray-800 bg-opacity-50 z-40" onClick={toggleSidebar}>
-          {/* Sidebar Component */}
-          <Sidebar/>
+        <div className="fixed inset-0 bg-gray-800 bg-opacity-50 z-40">
+          {/* Sidebar Container */}
+          <div className="fixed top-0 left-0 w-64 h-full bg-white shadow-lg z-50 text-black">
+            <Sidebar />
+          </div>
         </div>
       )}
     </header>
