@@ -53,7 +53,7 @@ const Navbar = () => {
         <VscThreeBars onClick={toggleMenuOption} />
       </div>
       <div className="md:flex flex-1 mr-24 md:mr-72">
-        <h1 className="text-3xl md:text-2xl font-bold text-gray-800 ml-3 md:mr-[480px]">Overview</h1>
+        <h1 className="text-3xl md:text-2xl font-bold text-gray-600 ml-3 md:mr-[480px]">Overview</h1>
       </div>
 
       {/* Right Section (Search Bar and User Controls) */}
